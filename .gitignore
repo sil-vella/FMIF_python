@@ -1,0 +1,96 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+ENV/
+
+# Django stuff:
+*.log
+staticfiles/
+local_settings.py
+
+# Flask/Django instance folder
+instance/
+.webassets-cache
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pip and package managers
+*.lock
+pip-log.txt
+pip-delete-this-directory.txt
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Celery beat schedule file
+celerybeat-schedule
+celerybeat.pid
+
+# Sphinx documentation
+docs/_build/
+
+# PyInstaller
+#  Usually these files are written by a Python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+
+# Mac OS X metadata
+.DS_Store
+
+# Environments
+.env
+.env.*
+
+# Docker
+docker-compose*.yml
+Dockerfile
+
+# Logs
+*.log
+*.out
+*.err
+
+# VS Code
+.vscode/
+
+# IDE files
+.idea/
+
+# MyPy
+.mypy_cache/
+
+# Bandit
+.bandit/
+
+# Pytest Cache
+.pytest_cache/
