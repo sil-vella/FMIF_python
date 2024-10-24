@@ -1,0 +1,16 @@
+{
+    "modules": [
+        {
+            "name": "main_module",
+            "class_name": "MainModule",
+            "enabled": true,
+            "init_at_startup": true
+        },
+        {
+            "name": "login_module",
+            "class_name": "LoginModule",
+            "enabled": true,
+            "init_at_startup": true
+        }
+    ]
+}

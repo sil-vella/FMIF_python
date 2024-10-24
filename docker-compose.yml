@@ -1,0 +1,31 @@
+services:
+  server:
+    image: silvella/fmif_python:latest  # Use the new image instead of building
+    container_name: flask_app
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - POSTGRES_USER=${POSTGRES_USER}     # Local PostgreSQL user
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}  # Local PostgreSQL password
+      - POSTGRES_DB=${POSTGRES_DB}        # Local PostgreSQL database
+      - DB_HOST=host.docker.internal      # This ensures the container can reach the host's PostgreSQL
+    volumes:
+      - type: bind
+        source: ./app.py
+        target: /app/app.py
+      - type: bind
+        source: ./modules
+        target: /app/modules
+      - type: bind
+        source: ./celebs_data
+        target: /app/celebs_data
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

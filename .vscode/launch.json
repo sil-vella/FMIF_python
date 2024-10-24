@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Run app.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/app.py",  // Path to your app.py
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",  // Ensures that the root folder is used as working directory
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"  // Ensures that Python treats the root folder as part of PYTHONPATH
+            },
+            "envFile": "${workspaceFolder}/.env",  // Optional: If you have an .env file for environment variables
+            "justMyCode": true
+        }
+    ]
+}

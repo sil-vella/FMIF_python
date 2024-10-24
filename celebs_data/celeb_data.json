@@ -1,0 +1,66 @@
+{
+    "tom_hanks": {
+        "categories": [
+            "all",
+            "actors"
+        ],
+        "facts": [
+            "This actor voiced a beloved cowboy doll in a series of animated films about a group of toys that come to life.",
+            "Won consecutive Academy Awards for playing a lawyer battling AIDS and a man with a low IQ who experiences key moments in U.S. history.",
+            "Starred as a stranded man on a deserted island where his only companion is a volleyball.",
+            "Portrayed the captain of a U.S. cargo ship that gets hijacked by Somali pirates, delivering the memorable line, \"I am the captain now.\"",
+            "Played an astronaut in a true story about a failed mission to the moon, where his crew struggles to return to Earth safely.",
+            "Known for his role as a beloved children's TV show host who taught kindness and empathy, based on a real-life figure.",
+            "Starred as a FedEx employee whose survival story spans four years after a plane crash, where he creates an entire world to cope with isolation.",
+            "Delivered mail in a film set in a post-apocalyptic America, where he becomes a symbol of hope and rebuilding society."
+        ]
+    },
+    "scarlett_johansson": {
+        "categories": [
+            "all",
+            "actors"
+        ],
+        "facts": [
+            "This actress is well-known for playing a spy with red hair in a superhero franchise, where she often uses martial arts and high-tech gadgets.",
+            "She starred in a futuristic film where her character's consciousness is uploaded into an AI, making her one of the first post-human beings.",
+            "In a critically acclaimed indie film, she played a woman navigating a complicated relationship with her estranged husband, set against the backdrop of a messy divorce.",
+            "This actress voiced a sultry, intelligent operating system in a thought-provoking sci-fi film, capturing the complexities of human-AI relationships.",
+            "She portrayed an alien who preys on unsuspecting men in a dark and surreal film set in Scotland.",
+            "She earned praise for her role in a World War II satire, where she played a mother hiding a Jewish girl while raising her young son under the Nazi regime.",
+            "This actress starred in a live-action adaptation of a popular anime, portraying a cyber-enhanced soldier with a mysterious past.",
+            "She made her breakthrough as a young actress in a comedy-drama where she forms an unexpected friendship with an older man in Tokyo."
+        ]
+    },
+    "sweet_anita": {
+        "categories": [
+            "all",
+            "streamers"
+        ],
+        "facts": [
+            "Known for her unique personality, this popular streamer often advocates for mental health awareness, especially about Tourette\u2019s syndrome, which she has openly shared about.",
+            "She has an infectious sense of humor and often blends her streams with just chatting and gaming content, but what really stands out are her unfiltered reactions and spontaneous commentary.",
+            "While she plays a variety of games, this streamer is particularly fond of Overwatch and often engages with her community in multiplayer gaming sessions.",
+            "This content creator gained attention on platforms like YouTube and Twitch for her candid approach to discussing everyday life and for breaking stereotypes about women in gaming.",
+            "She\u2019s passionate about animals, especially her pet bunny, which often makes appearances during her streams.",
+            "This streamer has faced a lot of online challenges but is known for her resilience and using her platform to address harassment and raise awareness on important social issues.",
+            "Outside of gaming, she\u2019s become an advocate for others with neurological conditions and has used her platform to help educate people about Tourette\u2019s in a positive and light-hearted manner.",
+            "Fans love her for her genuine and relatable personality, often referring to her streams as a safe space where humor, honesty, and inclusivity thrive."
+        ]
+    },
+    "brad_pitt": {
+        "categories": [
+            "all",
+            "actors"
+        ],
+        "facts": [
+            "This actor made his breakthrough in the 1991 film about two women on a road trip, playing a charming drifter.",
+            "He won his first Academy Award for portraying a stunt double in a film set in the 1960s Hollywood, directed by Quentin Tarantino.",
+            "Known for his role in a movie about seven deadly sins, where he plays a detective alongside Morgan Freeman.",
+            "Played an aging character who grows younger as time goes by in a film directed by David Fincher.",
+            "Was once married to another Hollywood superstar who portrayed Lara Croft in \"Tomb Raider.\"",
+            "Starred in a heist film series where his character is part of a crew that plans elaborate robberies in Las Vegas.",
+            "Famous for playing a legendary Achilles in a film based on the events of the Trojan War.",
+            "Portrayed an American soldier leading a team of Nazi hunters in a brutal World War II film directed by Quentin Tarantino."
+        ]
+    }
+}
