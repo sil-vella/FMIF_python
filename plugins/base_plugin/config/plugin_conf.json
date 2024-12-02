@@ -1,0 +1,16 @@
+{
+    "plugins": [
+        {
+            "name": "main_plugin",
+            "class_name": "Mainplugin",
+            "enabled": true,
+            "init_at_startup": true
+        },
+        {
+            "name": "login_plugin",
+            "class_name": "Loginplugin",
+            "enabled": true,
+            "init_at_startup": true
+        }
+    ]
+}

@@ -118,27 +118,27 @@ def log_function_call(func):
     wrapper._is_logged = True
     return wrapper
 
-def add_logging_to_module(module, exclude_instances=None, exclude_packages=None):
-    custom_log(f"Adding logging to module: {module.__name__}")
-    exclude_functions = {log_function_call, add_logging_to_module, custom_log, game_play_log, function_log}
+def add_logging_to_plugin(plugin, exclude_instances=None, exclude_packages=None):
+    custom_log(f"Adding logging to plugin: {plugin.__name__}")
+    exclude_functions = {log_function_call, add_logging_to_plugin, custom_log, game_play_log, function_log}
     if exclude_instances is None:
         exclude_instances = []
     if exclude_packages is None:
         exclude_packages = []
 
-    for name, obj in inspect.getmembers(module):
+    for name, obj in inspect.getmembers(plugin):
         if isinstance(obj, types.FunctionType) and not hasattr(obj, '_is_logged'):
             if obj not in exclude_functions and name != "__init__":
-                if not any(obj.__module__.startswith(package) for package in exclude_packages):
-                    custom_log(f"Adding logging to function: {name} in module: {module.__name__}")
-                    setattr(module, name, log_function_call(obj))
+                if not any(obj.__plugin__.startswith(package) for package in exclude_packages):
+                    custom_log(f"Adding logging to function: {name} in plugin: {plugin.__name__}")
+                    setattr(plugin, name, log_function_call(obj))
                     custom_log(f"Function {name} is now decorated.")
         elif isinstance(obj, type):  # Check if obj is a class
-            custom_log(f"Class {name} found in module: {module.__name__}")
+            custom_log(f"Class {name} found in plugin: {plugin.__name__}")
             for cls_name, cls_member in inspect.getmembers(obj):
                 if isinstance(cls_member, types.FunctionType) and not hasattr(cls_member, '_is_logged'):
                     if cls_member not in exclude_functions and cls_name != "__init__":
-                        if not any(cls_member.__module__.startswith(package) for package in exclude_packages):
+                        if not any(cls_member.__plugin__.startswith(package) for package in exclude_packages):
                             custom_log(f"Adding logging to method: {cls_name} in class {name}")
                             setattr(obj, cls_name, log_function_call(cls_member))
                             custom_log(f"Method {cls_name} in class {name} is now decorated.")

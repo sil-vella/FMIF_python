@@ -1,8 +1,8 @@
 from flask import Flask
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
-from modules.base_module.module_factory import ModuleFactory
-from modules.base_module.module_manager import ModuleManager
+from plugins.base_plugin.plugin_factory import pluginFactory
+from plugins.base_plugin.plugin_manager import pluginManager
 import os
 
 app = Flask(__name__)
@@ -14,18 +14,18 @@ app.config['JWT_SECRET_KEY'] = os.getenv("JWT_SECRET_KEY")  # Remove the comma
 # Initialize JWTManager
 jwt = JWTManager(app)
 
-# Initialize the module factory
-module_factory = ModuleFactory()
+# Initialize the plugin factory
+plugin_factory = pluginFactory()
 
-# Initialize the module manager
-module_manager = ModuleManager()
+# Initialize the plugin manager
+plugin_manager = pluginManager()
 
-# Load modules using the factory and add them to the manager
-modules = module_factory.load_modules()  # Make sure LoginModule is included
-module_manager.initialize_modules(modules)
+# Load plugins using the factory and add them to the manager
+plugins = plugin_factory.load_plugins()  # Make sure Loginplugin is included
+plugin_manager.initialize_plugins(plugins)
 
-# Register the module routes with the Flask app
-module_manager.register_routes(app)
+# Register the plugin routes with the Flask app
+plugin_manager.register_routes(app)
 
 @app.route('/')
 def home():

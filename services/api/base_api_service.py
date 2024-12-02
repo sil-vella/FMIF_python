@@ -2,10 +2,9 @@ import psycopg2
 import os
 
 class BaseApiService:
- 
     def __init__(self):
         self.db_connection = self.connect_to_db()
- 
+
     def connect_to_db(self):
         """Establish a connection to the database and return the connection object."""
         try:
@@ -23,17 +22,42 @@ class BaseApiService:
             return None
 
     def fetch_from_db(self, query, params=None):
-        """Helper method to execute a query and fetch results."""
+        if not self.db_connection:
+            print("Database connection not found. Attempting to reconnect...")
+            self.db_connection = self.connect_to_db()
+
         conn = self.db_connection
         if conn:
             try:
                 cursor = conn.cursor()
-                cursor.execute(query, params)  # Parameterized query
+                cursor.execute(query, params)
                 results = cursor.fetchall()
                 cursor.close()
+                print(f"Fetched results: {results}")  # Debugging output
                 return results
             except Exception as e:
                 print(f"Error executing query: {e}")
                 return None
         else:
-            return "Failed to connect to the database"
+            print("Database connection is not available")
+            return None
+
+    def execute_query(self, query, params=None):
+        """Execute a database query that modifies data."""
+        if not self.db_connection:
+            print("Database connection not found. Attempting to reconnect...")
+            self.db_connection = self.connect_to_db()
+
+        conn = self.db_connection
+        if conn:
+            try:
+                cursor = conn.cursor()
+                cursor.execute(query, params)
+                conn.commit()  # Commit the transaction for data modification
+                cursor.close()
+                print("Query executed successfully")  # Debugging output
+            except Exception as e:
+                print(f"Error executing query: {e}")
+                conn.rollback()  # Rollback the transaction on error
+        else:
+            print("Database connection is not available")
